@@ -10,7 +10,7 @@ int main() {
     file.open("DeQueue.csv");
     int* arr = (int*)malloc(0);
     List list;
-    string result = "횟수,배열,리스트\n";
+    file <<  = "횟수,배열,리스트\n";
     if (file.fail()) {
         cout << "실패\n";
         return 0;
@@ -21,8 +21,7 @@ int main() {
         list.Push(i);
     }
     for (int i = 1; i < 10; i++)
-        result += to_string(i) + "," + to_string(DeQueue(&arr)) + "," + to_string(list.DeQueue()) + "\n";
-    file.write(result.c_str(), result.size());
+        file << to_string(i) + "," + to_string(DeQueue(&arr)) + "," + to_string(list.DeQueue()) + "\n";
 	file.close();
     return 0;
 }*/

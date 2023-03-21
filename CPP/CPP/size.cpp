@@ -9,7 +9,7 @@ int main() {
 	file.open("size.csv");
 	int* arr = (int*)malloc(0);
 	List list;
-	string result = "횟수,배열,리스트\n";
+	file << "횟수,배열,리스트\n";
 	if (file.fail()) {
 		cout << "실패\n";
 		return 0;
@@ -18,9 +18,8 @@ int main() {
 	for (int i = 1; i < 11; i++) {
 		Push(&arr, i + 1);
 		list.Push(i);
-		result += to_string(i) + "," + to_string(GetSize(arr))+","+ to_string(list.GetSize())+"\n";
+		file << to_string(i) + "," + to_string(GetSize(arr))+","+ to_string(list.GetSize())+"\n";
 	}
-	file.write(result.c_str(), result.size());
 	file.close();
 	return 0;
 }*/
