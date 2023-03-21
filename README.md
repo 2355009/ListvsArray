@@ -1,2 +1,2 @@
-# List vs Arrat
+# List vs Array
 데이터 분석 포트폴리오 용도로 리포지토리입니다. 인코딩 방식은 EUC-KR방식을 사용했습니다.
